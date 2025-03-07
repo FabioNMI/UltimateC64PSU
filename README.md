@@ -9,6 +9,7 @@ Link to the video in the NMI channel: https://youtu.be/_GyQUuKDc-I
 There are two version that differ only in the PCB form-factor:
 
 v7_front is the format featured in my video (power output in the front)
+
 v8_back is a different layout with all connections on the back
 
 Enjoy!
