@@ -1,0 +1,11 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+arg1 = $(1)
+export PATH=/home/fabiop/.local/share/renesas/e2_studio/toolchains/gcc_arm/13_2-Rel1/arm-gnu-toolchain-13.2.Rel1-x86_64-arm-none-eabi/bin/:/home/fabiop/.local/share/renesas/e2_studio/eclipse/plugins/com.renesas.ide.exttools.gnumake.linux.x86_64_1.0.0.v20220121-1024/mk/:/home/fabiop/toolchains/gcc_4.9.2.202201_gnurl78-elf/bin:/home/fabiop/.cargo/bin:/home/fabiop/.local/bin:/home/fabiop/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+export TCINSTALL=/home/fabiop/.local/share/renesas/e2_studio/toolchains/gcc_arm/13_2-Rel1/arm-gnu-toolchain-13.2.Rel1-x86_64-arm-none-eabi/
+export CWD=$(CURDIR)
+export TC_VERSION=13.2.1.arm-13-7
+export PWD=$(CURDIR)
+export GCC_VERSION=13.2.1

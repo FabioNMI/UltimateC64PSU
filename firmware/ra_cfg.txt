@@ -1,0 +1,205 @@
+FSP Configuration
+  Board "Custom User Board (Any Device)"
+  R7FA0E1073CSC
+    part_number: R7FA0E1073CSC
+    rom_size_bytes: 65536
+    ram_size_bytes: 12288
+    data_flash_size_bytes: 1024
+    package_style: LSSOP
+    package_pins: 20
+    
+  RA0E1
+    series: 0
+    
+  RA0E1 Family
+    Enable inline BSP IRQ functions: Disabled
+    OFS0 register settings: Independent WDT: Start Mode: IWDT is Disabled
+    OFS0 register settings: Independent WDT: Timeout Period: 2048 cycles
+    OFS0 register settings: Independent WDT: Dedicated Clock Frequency Divisor: 128
+    OFS0 register settings: Independent WDT: Window End Position:  0% (no window end position)
+    OFS0 register settings: Independent WDT: Window Start Position: 100% (no window start position)
+    OFS0 register settings: Independent WDT: Reset Interrupt Request Select: Reset is enabled
+    OFS0 register settings: Independent WDT: Stop Control: Stop counting when in Sleep, Snooze mode, or Software Standby
+    OFS1 register settings: Voltage Detection 0 Circuit Start: Voltage monitor 0 reset is disabled after reset
+    OFS1 register settings: Voltage Detection 0 Level: 1.86 V
+    OFS1 register settings: Enable or disable Flash Read Protection: Disabled
+    OFS1 register settings: Flash Read Protection Start: 0x01
+    OFS1 register settings: Flash Read Protection End: 0x3F
+    OFS1 register settings: P206/RES pin selection: RES input
+    Main Oscillation Stabilization Time: 2^18/X1
+    Use Low Voltage Mode: Not Supported
+    ID Code Mode: Unlocked (Ignore ID)
+    ID Code (32 Hex Characters): FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+    Fill Flash Gap: Fill gap
+    
+  RA0E1 event data
+  RA Common
+    Main stack size (bytes): 1024
+    Heap size (bytes): 2048
+    MCU Vcc (mV): 5000
+    Parameter checking: Disabled
+    Assert Failures: Return FSP_ERR_ASSERTION
+    Error Log: No Error Log
+    Clock Registers not Reset Values during Startup: Disabled
+    Main Oscillator Populated: Not Populated
+    PFS Protect: Enabled
+    C Runtime Initialization : Enabled
+    Early BSP Initialization : Disabled
+    Main Oscillator Clock Source: Crystal or Resonator
+    Subclock Populated: Not Populated
+    Subclock Drive (Drive capacitance availability varies by MCU): Standard/Normal mode
+    Subclock Stabilization Time (ms): 1000
+    
+  Clocks
+    X1 20000000Hz
+    X1 Div /1
+    HOCO 32MHz
+    HOCO Div /1
+    MOCO Div /1
+    ICLK Src: HOCO
+    TAU CK00 Div /1
+    TAU CK01 Div /32
+    TAU CK02 Div /2
+    TAU CK03 Div /256
+    SAU CK00 Div /2
+    SAU CK01 Div /1
+    SAU CK10 Div /2
+    SAU CK11 Div /1
+    CLKOUT Disabled
+    CLKOUT Div /1
+    UARTA Src: Disabled
+    FSXP Src: SUBCLK
+    TML FITL0 Src: ELC event/No BSP Source Clock
+    TML FITL1 Src: ELC event/No BSP Source Clock
+    TML FITL2 Disabled/No BSP Source Clock
+    
+  Pin Configurations
+    R7FA0E1073CFJ.pincfg -> g_bsp_pin_cfg
+      P010 1 ADC0_AN000 V_ADC - - "Analog mode" - - "ADC0: AN000; SYSTEM: VREFH0" - I - - 
+      P011 20 ADC0_AN001 I_ADC - - "Analog mode" - - "ADC0: AN001; SYSTEM: VREFL0" - I - - 
+      P012 19 ADC0_AN004 VO_ADC - - "Analog mode" - - "ADC0: AN004" - I - - 
+      P013 18 GPIO ON_OFF - - "Input mode" - - "ADC0: AN005" - IO - - 
+      P100 17 GPIO FREQ_SEL - None "Input mode" - - "ADC0: AN022; IRQ: IRQ2; SAU_I2C00: SDA00; SAU_SPI00: SI00; SAU_UART0: RXD0; TAU01: TI01; TAU01: TO01; TAU04: TI04; TAU04: TO04; UARTA: RXDA" - IO - - 
+      P101 16 GPIO PIN_AC_FAULT - None "Input mode" - - "ADC0: AN021; IRQ: IRQ3; SAU_SPI00: SO00; SAU_UART0: TXD0; TAU00: TI00; TAU07: TI07; TAU07: TO07; UARTA: TXDA" - IO - - 
+      P102 15 GPIO PIN_AC_SLEEP - None "Output mode (Initial Low)" - - "CGC: PCLBUZ0; IRQ: IRQ4; RTC: RTCOUT; SAU_I2C00: SCL00; SAU_SPI00: SCK00; TAU00: TO00; TAU06: TI06; TAU06: TO06" - IO - - 
+      P108 11 JTAG/SWD_SWDIO - - - "Peripheral mode" - - "JTAG/SWD: SWDIO; TAU03: TI03; TAU03: TO03" - IO - - 
+      P109 12 GPIO PIN_5V_EN - None "Output mode (Initial Low)" - - "IRQ: IRQ4; SAU_SPI20: SO20; SAU_UART2: TXD2; TAU02: TI02; TAU02: TO02; UARTA: TXDA" - IO - - 
+      P110 13 GPIO PIN_AC_IN1 - None "Output mode (Initial Low)" - - "IRQ: IRQ3; SAU_I2C20: SDA20; SAU_SPI20: SI20; SAU_UART2: RXD2; TAU01: TI01; TAU01: TO01; UARTA: RXDA" - IO - - 
+      P112 14 GPIO PIN_AC_IN2 - None "Output mode (Initial Low)" - - "IRQ: IRQ2; SAU_I2C20: SCL20; SAU_SPI00: SSI00; SAU_SPI20: SCK20; TAU03: TI03; TAU03: TO03" - IO - - 
+      P200 9 GPIO AUX1 - None "Input mode" - - "IRQ: IRQ0" - I - - 
+      P201 8 SAU_I2C11_SCL11 - - None "Peripheral mode" - - "CGC: PCLBUZ0; IRQ: IRQ5; RTC: RTCOUT; SAU_I2C11: SCL11; SAU_SPI00: SSI00; SAU_SPI11: SCK11; TAU05: TI05; TAU05: TO05" - O - - 
+      P206 7 - - - - Disabled - - "SYSTEM: RES" - None - - 
+      P212 5 SAU_I2C11_SDA11 - - None "Peripheral mode" - - "CGC: X1; CGC: XCIN; IRQ: IRQ1; SAU_I2C11: SDA11; SAU_SPI11: SI11; SAU_UART1: RXD1; TAU00: TO00; TAU03: TI03; TAU03: TO03; UARTA: RXDA" - IO - - 
+      P213 4 GPIO AUX2 - None "Input mode" - - "CGC: EXCLK; CGC: X2; CGC: XCOUT; IRQ: IRQ0; SAU_SPI11: SO11; SAU_UART1: TXD1; TAU00: TI00; TAU02: TI02; TAU02: TO02; UARTA: TXDA" - IO - - 
+      P300 10 JTAG/SWD_SWCLK - - - "Peripheral mode" - - "JTAG/SWD: SWCLK; TAU04: TI04; TAU04: TO04" - IO - - 
+      VCC 6 SYSTEM_VCC - - - - - - - - IO "Read only" - 
+      VCL 2 SYSTEM_VCL - - - - - - - - IO "Read only" - 
+      VSS 3 SYSTEM_VSS - - - - - - - - IO "Read only" - 
+    R7FA0E1073CSC.pincfg -> 
+      P010 1 - V_ADC - - Disabled - - "ADC0: AN000; SYSTEM: VREFH0" - I - - 
+      P011 20 - I_ADC - - Disabled - - "ADC0: AN001; SYSTEM: VREFL0" - I - - 
+      P012 19 - VO_ADC - - Disabled - - "ADC0: AN004" - I - - 
+      P013 18 - ON_OFF - - Disabled - - "ADC0: AN005" - IO - - 
+      P100 17 - FREQ_SEL - None Disabled - - "ADC0: AN022; IRQ: IRQ2; SAU_I2C00: SDA00; SAU_SPI00: SI00; SAU_UART0: RXD0; TAU01: TI01; TAU01: TO01; TAU04: TI04; TAU04: TO04; UARTA: RXDA" - IO - - 
+      P101 16 - PIN_AC_FAULT - None Disabled - - "ADC0: AN021; IRQ: IRQ3; SAU_SPI00: SO00; SAU_UART0: TXD0; TAU00: TI00; TAU07: TI07; TAU07: TO07; UARTA: TXDA" - IO - - 
+      P102 15 - PIN_AC_SLEEP - None Disabled - - "CGC: PCLBUZ0; IRQ: IRQ4; RTC: RTCOUT; SAU_I2C00: SCL00; SAU_SPI00: SCK00; TAU00: TO00; TAU06: TI06; TAU06: TO06" - IO - - 
+      P108 11 JTAG/SWD_SWDIO - - - "Peripheral mode" - - "JTAG/SWD: SWDIO; TAU03: TI03; TAU03: TO03" - IO - - 
+      P109 12 - PIN_5V_EN - None Disabled - - "IRQ: IRQ4; SAU_SPI20: SO20; SAU_UART2: TXD2; TAU02: TI02; TAU02: TO02; UARTA: TXDA" - IO - - 
+      P110 13 - PIN_AC_IN1 - None Disabled - - "IRQ: IRQ3; SAU_I2C20: SDA20; SAU_SPI20: SI20; SAU_UART2: RXD2; TAU01: TI01; TAU01: TO01; UARTA: RXDA" - IO - - 
+      P112 14 - PIN_AC_IN2 - None Disabled - - "IRQ: IRQ2; SAU_I2C20: SCL20; SAU_SPI00: SSI00; SAU_SPI20: SCK20; TAU03: TI03; TAU03: TO03" - IO - - 
+      P200 9 - AUX1 - None Disabled - - "IRQ: IRQ0" - I - - 
+      P201 8 - - - None Disabled - - "CGC: PCLBUZ0; IRQ: IRQ5; RTC: RTCOUT; SAU_I2C11: SCL11; SAU_SPI00: SSI00; SAU_SPI11: SCK11; TAU05: TI05; TAU05: TO05" - O - - 
+      P206 7 - - - - Disabled - - "SYSTEM: RES" - None - - 
+      P212 5 - - - None Disabled - - "CGC: X1; CGC: XCIN; IRQ: IRQ1; SAU_I2C11: SDA11; SAU_SPI11: SI11; SAU_UART1: RXD1; TAU00: TO00; TAU03: TI03; TAU03: TO03; UARTA: RXDA" - IO - - 
+      P213 4 - AUX2 - None Disabled - - "CGC: EXCLK; CGC: X2; CGC: XCOUT; IRQ: IRQ0; SAU_SPI11: SO11; SAU_UART1: TXD1; TAU00: TI00; TAU02: TI02; TAU02: TO02; UARTA: TXDA" - IO - - 
+      P300 10 JTAG/SWD_SWCLK - - - "Peripheral mode" - - "JTAG/SWD: SWCLK; TAU04: TI04; TAU04: TO04" - IO - - 
+      VCC 6 SYSTEM_VCC - - - - - - - - IO "Read only" - 
+      VCL 2 SYSTEM_VCL - - - - - - - - IO "Read only" - 
+      VSS 3 SYSTEM_VSS - - - - - - - - IO "Read only" - 
+    
+  User Events
+    
+  User Event Links
+    
+  Module "I/O Port (r_ioport)"
+    Parameter Checking: Default (BSP)
+    
+  Module "ADC (r_adc_d)"
+    Parameter Checking: Default (BSP)
+    Internal Reference Voltage Support: Disabled
+    Snooze Mode Support: Disabled
+    Interrupt Support: Disabled
+    
+  Module "I2C Master (r_sau_i2c)"
+    Parameter Checking: Default (BSP)
+    Enable Critical Section: Disabled
+    Manual Start-Stop: Disabled
+    Enable Single Channel: Disabled
+    I2C Restart: Enable
+    DTC Support: Disable
+    
+  Module "Timer, Independent Channel, 16-bit and 8-bit Timer Operation (r_tau)"
+    Parameter Checking: Default (BSP)
+    Interrupt Support: Enabled
+    Pin Output Support: Disabled
+    Pin Input Support: Disabled
+    Extra Input Mode Support: Disabled
+    8-Bit Mode Support: Disabled
+    
+  HAL
+    Instance "g_ioport I/O Port (r_ioport)"
+      Name: g_ioport
+      1st Port ELC Trigger Source: Disabled
+      2nd Port ELC Trigger Source: Disabled
+      3rd Port ELC Trigger Source: Disabled
+      4th Port ELC Trigger Source: Disabled
+      Pin Configuration Name: g_bsp_pin_cfg
+      
+    Instance "g_adc0 ADC (r_adc_d)"
+      General: Name: g_adc0
+      General: Resolution: 12-Bit
+      General: Conversion operation: One-shot
+      General: Operation trigger: Wait
+      General: Operation voltage: Normal 1
+      General: Conversion Clock (fAD): PCLK
+      Input: Channel Selection Mode: Select
+      Input: A/D Input channel: Channel 0 (channels 0-3 in scan mode)
+      Input: Negative Side Reference Voltage: VSS
+      Input: Positive Side Reference Voltage: VCC
+      Interrupts: Callback: NULL
+      Interrupts: Scan End Interrupt Priority: Disabled
+      Interrupts: Start trigger source: Software
+      Interrupts: Conversion Result upper/lower bound value setting: Generates an interrupt request (INTAD): The interrupt signal is output when the ADLL register <= the ADCRn register <= the ADUL register
+      Interrupts: Conversion Result upper/lower bound value setting: Upper bound (ADUL) value: 255
+      Interrupts: Conversion Result upper/lower bound value setting: Lower bound (ADLL) value: 0
+      
+    Instance "g_i2c0 I2C Master (r_sau_i2c)"
+      General: Name: g_i2c0
+      General: Channel: 11
+      General: Operation clock: CK0
+      General: Slave Address: 0x3c
+      General: Rate: Standard
+      Custom Rate (bps): 0
+      General: Delay time (Microseconds): 5
+      General: Callback: sau_i2c_master_callback
+      General: Transfer end interrupt priority: Priority 2
+      
+    Instance "g_timer0 Timer, Independent Channel, 16-bit and 8-bit Timer Operation (r_tau)"
+      General: Name: g_timer0
+      General: Channel: 0
+      General: Function: Interval Timer
+      General: Bit Timer Mode: 16-bit timer
+      General: Operation Clock: CK01
+      General: Period: 60
+      General: Period Unit: Hertz
+      General: Period (Higher 8-bit timer): 0x100
+      General: Period Unit (Higher 8-bit timer): Raw Counts
+      Input: Input Source: No input signal
+      Input: Trigger Edge: Trigger Edge Rising
+      Input: Input Filter: Disabled
+      Output: Initial Output: Disabled
+      Interrupts: Setting of starting count and interrupt: Timer interrupt is not generated when counting is started/Start trigger is invalid during counting operation.
+      Interrupts: Callback: callback60Hz
+      Interrupts: Interrupt Priority: Priority 0 (highest)
+      Interrupts: Higher 8-bit Interrupt Priority: Disabled
+      

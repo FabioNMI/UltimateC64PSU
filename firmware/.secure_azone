@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<azone>
+    <rzone name="R7FA0E1073CSC.rzone"/>
+    <partition>
+        <peripheral name="PORT0" group="PORT">
+            <slot name="P010" secure="false"/>
+            <slot name="P011" secure="false"/>
+            <slot name="P012" secure="false"/>
+            <slot name="P013" secure="false"/>
+        </peripheral>
+        <peripheral name="PORT1" group="PORT">
+            <slot name="P100" secure="false"/>
+            <slot name="P101" secure="false"/>
+            <slot name="P102" secure="false"/>
+            <slot name="P108" secure="false"/>
+            <slot name="P109" secure="false"/>
+            <slot name="P110" secure="false"/>
+            <slot name="P112" secure="false"/>
+        </peripheral>
+        <peripheral name="PORT2" group="PORT">
+            <slot name="P200" secure="false"/>
+            <slot name="P201" secure="false"/>
+            <slot name="P212" secure="false"/>
+            <slot name="P213" secure="false"/>
+        </peripheral>
+        <peripheral name="PORT3" group="PORT">
+            <slot name="P300" secure="false"/>
+        </peripheral>
+        <peripheral name="TAU00" group="TAU" security=""/>
+        <peripheral name="ICU">
+            <slot name="IRQ19" secure="false"/>
+            <slot name="IRQ23" secure="false"/>
+        </peripheral>
+    </partition>
+</azone>
